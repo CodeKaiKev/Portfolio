@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 0;
+}
+body{
+ 
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.07),rgba(0, 0, 0, 0.07)),url(train.jpg);*/
+    background-image: linear-gradient(45deg, #00ff73 0%, #00ffd5 1%, #0d414f 100%);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+   
+
+}
+
+.navbar{
+    height: 18%;
+    display: flex;
+    align-items: center;
+}
+/*
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+*/
+.menu{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+
+}
+
+.row{
+    display: flex;
+    height: 60%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color:#fff;
+    font-size: 100px;
+    text-shadow: 0 0 3px #fff;
+}
+p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+    inline-size: 400px;
+    overflow-wrap: break-word;
+}
+.bInfo{
+    width: 200px;
+    color: rgb(255, 254, 254);
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 12px 0;
+    background: rgba(255, 191, 0, 0.884);
+    border:0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 40px;
+    transition: transform 0.4s;
+    
+
+}
+
+.bInfo:hover{
+    transform: translateY(-10px);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+.form{
+    margin-left: 800px;
+    margin-top: -100px;
+
+}
+.form2{
+    background-color: rgb(255, 213, 0);
+    color: rgb(255, 255, 255);
+    
+    margin-top: 5px;
+    border:0;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgb(255, 254, 254);
+}
+
+
+.buttonA{
+    width: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 12px 0;
+    background: rgb(255, 255, 255);
+    border:0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 10px;
+    transition: transform 0.4s;
+}
+
+.buttonA:hover{
+    transform: translateY(-5px);
+    
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}

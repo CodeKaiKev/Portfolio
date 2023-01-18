@@ -1,0 +1,6 @@
+Name: Faris Uddin
+Topic: Visual Studio Code
+Division: Technology
+City: London
+Feedback: Make sure it is installed.
+Yes &: Make sure it is pre-checked.

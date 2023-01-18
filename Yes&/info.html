@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTS Submissions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/29943ffe3f.js" crossorigin="anonymous"></script>
+    <script src="upload.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    
+    
+    
+
+    <link href="http://fonts.googleapis.com/css?family=Lobster:400,700" rel="stylesheet">
+
+</head>
+<body>
+    
+    <nav class="navbar davies-blue navbar-expand-lg" style="background-color:#0d414f">
+        <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">DTS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="info.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="submission.html">Info</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-dark" href="board.html">Ideas</a></li>
+                </ul>
+            </li>
+            </ul>
+            <!-- Search Bar -->
+            <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search.." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Navigation Bar -->
+        
+        
+        <div class="row">
+            <div class="col">
+                <DIV style="background-color:rgba(0, 0, 0, 0.509); width: 100%; padding: 40px; border-radius: 10px; box-shadow: 0 0 10px #fff; text-align: center; justify-content: center;">
+                <h1 style="text-shadow: 0 0 3px #fff; color: white; font-size: 60px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Innovation & Aspire</h1>
+                <br>
+                <p style="font-size: 18px; text-align:center; width: 100%">Everything begins with an idea. - Earl Nightingale.</p>
+                </DIV>
+                <div style="width: 100%; justify-content: center; margin-left: 400px;">
+                    <a href="submission.html">
+                        <button type="button" class="bInfo" style="border-radius:20px">Information</button>
+                    </a>
+                    
+                    
+                    <a href="board.html">
+                        <button type="button" class="bInfo" style="border-radius:20px">Ideas</button>
+                    </a>
+                    
+                    
+                   
+                </div>
+                
+            </div>
+        </div>
+        <!-- Forms-->
+        <form class="row g-3" style="width: 50%; color: rgb(255, 255, 255); text-shadow: 0 0 3px #fff; font-size: 15px; background-color: rgba(0, 0, 0, 0.109); border-radius: 10px; padding: 10px; width: 400px; box-shadow: 0 0 10px rgb(0, 0, 0); margin-left: 150px; margin-top: -60px;">
+            <div class="col-md-6">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="txtName" placeholder="Leave anonymous">
+            </div>
+            <div class="col-md-6">
+            <label for="inputName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="txtlName" placeholder="If wanted">
+            </div>
+            <div class="col-12">
+            <label for="inputTopic" class="form-label">Topic</label>
+            <input type="text" class="form-control" id="inputTopic" placeholder="Topic...">
+            </div>
+            <div class="col-12">
+                <label for="inputTopicA" class="form-label">Feedback</label>
+                <input type="text" class="form-control" id="inputTopicA" placeholder="Feedback...">
+                </div>
+            <div class="col-md-6">
+                <label for="exampleDataList" class="form-label" >Division</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." >
+                <datalist id="datalistOptions">
+                    <option value="Finance">
+                    <option value="Consulting">
+                    <option value="Technology">
+                    <option value="Strategy">
+                    <option value="Operations">
+                </datalist>
+            </div>
+            <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input  class="form-control" id="inputCity" list="datalistOptionZ" placeholder="City...">
+            <datalist id="datalistOptionZ">
+                <option value="London">London</option>
+                <option value="Norwich">Norwich</option>
+                <option value="Cardiff">Cardiff</option>
+            </datalist>
+            </div>
+            
+            
+        
+        
+        
+            <div >
+            
+            <button onclick="saveFileA()" class="buttonA">Save</button>
+            
+            <script>
+
+                    function saveFileA() {
+                        console.log("Saving...");
+                        const name = document.getElementById('txtName');
+                        const lname = document.getElementById('txtlName');
+                        const subject = document.getElementById('inputTopic');
+                        const division = document.getElementById('exampleDataList');
+                        const newData = document.getElementById('inputTopicA');
+                        const city = document.getElementById('inputCity');
+                        
+
+                        let data = 
+                            '\rName: ' + name.value + ' ' + lname.value + '\r\n' +
+                            'Topic: ' + subject.value + '\r\n' +
+                            'Division: ' + division.value + '\r\n' +
+                            'City: ' + city.value + '\r\n' +
+                            'Feedback: ' + newData.value + '\r\n' +
+                            'Yes &: ';
+
+                        const textToBLOB = new Blob([data], {type: 'text/plain'});
+                        const sFileName =  subject.value + '.txt';
+
+                        let newLink = document.createElement("a");
+                            newLink.download = sFileName;
+
+                            if (window.webkitURL != null) {
+                                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+                            }
+                            else {
+                                newLink.href = window.URL.createObjectURL(textToBLOB);
+                                newLink.style.display = "none";
+                                document.body.appendChild(newLink);
+                            }
+
+                            newLink.click(); 
+                        }
+            </script>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="flex-container" style="margin-top: -700px; margin-left: 650px">
+            <table class="table table-dark table-striped-columns" style="width: 500px;">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Division</th>
+                <th scope="col">Topic</th>
+                <th scope="col">City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Dylan</td>
+                <td>Strategy</td>
+                <td>Laptop</td>
+                <td>London</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Faris</td>
+                <td>Techonology</td>
+                <td>Food</td>
+                <td>London</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Kevin</td>
+                <td>Techonology</td>
+                <td>Parking</td>
+                <td>London</td>
+              </tr>
+            </tbody>
+          </table>
+
+        
+          
+            <!--Message Board-->
+            
+            <div class="filez" style="padding: 10px; background-color:rgba(0, 0, 0, 0.109); color: white; border-color: gold; width: 500px; border-radius: 10px;">
+            
+            <input type="file" id="upload">
+            <br>
+            <pre id="outputBx"></pre>
+            <button type="button" class="buttonA" style="font-size:12px; letter-spacing: 0px; background-color: white; color: black" onclick="reply()">Yes &</button>
+            
+            
+            <script>
+                //import fs from "fs";
+                let upload = document.getElementById('upload');
+                let outputBx = document.getElementById('outputBx');
+                let displayBx = document.getElementById('displayBx');
+                
+                console.log("Hello!");
+                upload.addEventListener("change", ()=>{
+                    
+                    let fr = new FileReader();
+
+                    fr.readAsText(upload.files[0]);
+                    
+                    
+                    fr.onload = function() {
+                        console.log(fr.result);
+                        outputBx.innerHTML = fr.result;
+                        
+                        
+                        
+                        
+
+                    }
+                   
+                })
+                console.log(upload);
+                
+                function reply() {
+                    console.log(upload.value);
+                    let reply = prompt("Please enter a reply to the query.");
+                    //alert(upload.value);
+                    
+                    
+                    let fInput = "You are reading the content from Tutorials Point"
+                    fs.writeFile(upload.value, fInput, (err) => {
+                    if (err) throw err;
+                    else{
+                        console.log("The file is updated with the given data")
+                    }
+                    })
+
+                    // Import the filesystem module
+                    //const fs = require("fs");
+                    // import fs from "fs";
+                    
+                    let directory_name = "C:\Users\kevin.paulraj\Programming\Scripts\Yes&\Feedback";
+                        
+                    // Function to get current filenames
+                    // in directory
+                    let filenames = fs.readdirSync(directory_name);
+                        
+                    console.log("\nFilenames in directory:");
+                    filenames.forEach((file) => {
+                        console.log("File:", file);
+                    });
+                }
+
+
+            </script>
+          
+        </div>
+      </div>
+        <!----
+        <div class="form">
+            <h3 style="margin-left: -13px; color: rgb(255, 255, 255); text-shadow: 0 0 3px #fff; font-size: 30px;">Submit Feedback</h3>
+            <div class="form3">
+            <div>
+                <input type="text" id="txtName" placeholder="       Please enter your name" place style="width:200px;" class="form2">
+            </div>
+            <div>
+                <input type="text" id="txtSubject" placeholder="                    Subject" place style="width:200px;" class="form2">
+            </div>
+                <div>
+                    <select id="selDivision" style="width:200px;" class="form2" >
+                    <option selected value=""> -------- Choose Division --------</option>
+                    <option value="Legal">Legal</option>
+                    <option value="Operations">Operations</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Strategy">Strategy</option>
+                    <option value="Finance">Finance</option>
+                    </select>
+                </div>
+            <div>
+                <textarea id="msg" name="msg" placeholder="" style="height:100px; width:200px;" class="form2">
+                </textarea>
+            </div>
+            </div>
+            <div>
+                <button onclick="saveFile()" class="buttonA">Save</button>
+                <script>
+                    function wag1() {
+                        console.log("Hello!");
+                    }
+                    function saveFile() {
+                        const name = document.getElementById('txtName');
+                        const subject = document.getElementById('txtSubject');
+                        const division = document.getElementById('selDivision');
+                        const msg = document.getElementById('msg');
+
+
+                        let data = 
+                            '\rName: ' + name.value + '\r\n' +
+                            'Subject: ' + subject.value + '\r\n' +
+                            'Division: ' + division.value + '\r\n' +
+                            'Message: ' + msg.value + '\r\n' + 
+                            'Yes &: ';
+
+                        const textToBLOB = new Blob([data], {type: 'text/plain'});
+                        const sFileName =  subject.value + '.txt';
+
+                        let newLink = document.createElement("a");
+                            newLink.download = sFileName;
+
+                            if (window.webkitURL != null) {
+                                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+                            }
+                            else {
+                                newLink.href = window.URL.createObjectURL(textToBLOB);
+                                newLink.style.display = "none";
+                                document.body.appendChild(newLink);
+                            }
+
+                            newLink.click(); 
+                        }
+                </script>
+            </div>
+            
+
+        </div>
+        <-->
+        
+        
+  
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer class="davies-blue text-center text-white">
+        <!-- Grid container -->
+        
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <!-- Github -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <span class="text-white">Kevin</span>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
+</body>
+
+</html>
